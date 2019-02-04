@@ -1,0 +1,32 @@
+body {
+  background-color: black;
+  color:white;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.formLine {
+  margin:10px;
+  padding:10px;
+  background-color: cornflowerblue;
+}
+.resetBtn{
+  /* position: initial; */
+  margin: 5px;
+  /* bottom: 60px; */
+  /* float: right; */
+  padding: 5px 5px;
+  color: green;
+  background-color: lightgreen;
+  border-radius: 9px;
+  box-shadow: 5px 5px 5px grey;
+}
+/* .victoryImg {
+  display: none;
+  position: absolute;
+} */
