@@ -48,9 +48,9 @@ function renderModal(id) {
         <img class="img-fluid d-block mx-auto" src="img/portfolio/${proj.id}-full.jpg" alt="">
         <p>${proj.desc}</p>
         <ul class="list-inline">
-          <li>Date: January 2017</li>
-          <li>Client: Threads</li>
-          <li>Category: Illustration</li>
+          <li>Date: ${new Date(proj.publishedAt).toDateString()}</li>
+          <li>Category: ${proj.title}</li>
+          <li>link: <a href=" ${proj.url}" target="_blank">${proj.name}</a>  </li>
         </ul>
         <button class="btn btn-primary" data-dismiss="modal" type="button">
             <i class="fa fa-times"></i>
@@ -58,26 +58,24 @@ function renderModal(id) {
     
     $('.modal-body').html(strHTML);    
 }
-
-
 function createProjs() {
 
     gProjs = [{
         "id": "chess",
         "name": "Chess game",
         "title": "board game",
-        "desc": "lorem ipsum lorem ipsum lorem ipsum",
+        "desc": "Chess is a two-player strategy board game played on a chessboard, a checkered gameboard with 64 squares arranged in an 8×8 grid. The game is played by millions of people worldwide.",
         "url": "projs/chess/index.html",
-        "publishedAt": 1448693940000,
+        "publishedAt": 1548002827000,
         "labels": ["Matrixes", "keyboard events"]
     },
     {
         "id": "pacman",
         "name": "Pacman",
         "title": "Arcade game",
-        "desc": "description",
+        "desc": "The player navigates Pac-Man through a maze containing dots, known as Pac-Dots, and four multi-colored ghosts: Blinky, Pinky, Inky and Clyde. The goal of the game is to accumulate as many points as possible by collecting the dots and eating ghosts. When all of the dots in a stage is eaten, that stage is completed and the player win",
         "url": "projs/pacman/index.html",
-        "publishedAt": 1448693940000,
+        "publishedAt": 327825187000,
         "labels": ["Matrixes", "keyboard events"]
     }]
 }
@@ -88,4 +86,9 @@ function getProjById(id) {
    return gProjs.find(function(proj){
         return proj.id === id;
     })
+}
+
+function openNewWindow(url) {
+    console.log(url)
+    window.open(url, '_blank')
 }
